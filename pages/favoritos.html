@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>NovaNews - Mis favoritos</title>
+</head>
+<body>
+<svg style="display:none">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-7.2-4.5-9.6-9C.8 8.7 2.1 5 6 4.5c2-.3 3.6.6 6 2.9 2.4-2.3 4-3.2 6-2.9 3.9.5 5.2 4.2 3.6 7.5-2.4 4.5-9.6 9-9.6 9z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.2a7 7 0 1 0-14 0C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.2V12l3.3 2"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.4 13.4L12.6 21.2a1.4 1.4 0 0 1-2 0L3 13.6V4h9.6z"/><circle cx="8" cy="8" r="1.3" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5"/><line x1="16" y1="3" x2="16" y2="7.5"/><line x1="8" y1="3" x2="8" y2="7.5"/><line x1="3.3" y1="10" x2="20.7" y2="10"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.7-3.8 4-6 7.5-6s6.8 2.2 7.5 6"/></symbol>
+  <symbol id="i-check-c" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="8 12.3 10.8 15 16 9.3"/></symbol>
+  <symbol id="i-alert-c" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="7.8" x2="12" y2="12.6"/><circle cx="12" cy="16" r=".9" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3.5" width="18" height="17" rx="2.5"/><circle cx="8.3" cy="9" r="1.6"/><path d="M21 15.5l-5.3-5.3L5 21"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M7.5 3.5h2l1.3 4-2 1.5a12 12 0 0 0 6.2 6.2l1.5-2 4 1.3v2c0 1.4-1.2 2.5-2.6 2.3A17 17 0 0 1 4.7 6.1a2.3 2.3 0 0 1 2.3-2.6z"/></symbol>
+  <symbol id="i-chevron-right" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></symbol>
+  <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6 3.5h12v17l-6-4-6 4z"/></symbol>
+</svg>
+
+<header class="site">
+  <div class="nav-wrap">
+    <div class="logo"><span class="mark">N</span>NovaNews</div>
+    <nav class="menu">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="listado.html">Noticias</a></li>
+        <li><a href="detalle.html">Categorías</a></li>
+        <li><a href="favoritos.html" class="active">Favoritos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a href="listado.html" class="icon-btn" aria-label="Buscar"><svg class="icon"><use href="#i-search"/></svg></a>
+      <a href="favoritos.html" class="icon-btn" aria-label="Favoritos"><svg class="icon"><use href="#i-heart"/></svg></a>
+      <a href="contacto.html" class="btn sm">Contáctanos</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="section-inner">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">Mis noticias favoritas</h2>
+        <p class="section-sub">Guardadas en este navegador con localStorage: se mantienen aunque cierres la pestaña.</p>
+      </div>
+    </div>
+
+    <div id="favoritos-lista" class="card-grid"></div>
+
+    <div id="favoritos-vacio" class="empty-state" hidden>
+      <svg class="icon"><use href="#i-heart"/></svg>
+      <h3>Aún no tienes noticias en favoritos</h3>
+      <p>Explora el listado de noticias y toca el ícono de corazón para guardarlas aquí.</p>
+      <a href="listado.html" class="btn">Explorar noticias <svg class="icon icon-sm"><use href="#i-arrow-right"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="footer-grid">
+    <div>
+      <div class="foot-logo"><span class="mark">N</span>NovaNews</div>
+      <p>Plataforma web de noticias educativas, tecnológicas, turísticas y comerciales.</p>
+      <div class="social-row"><a>f</a><a>in</a><a>x</a></div>
+    </div>
+    <div>
+      <h4>Enlaces</h4>
+      <ul>
+        <li><svg class="icon icon-sm"><use href="#i-chevron-right"/></svg><a href="../index.html">Inicio</a></li>
+        <li><svg class="icon icon-sm"><use href="#i-chevron-right"/></svg><a href="listado.html">Noticias</a></li>
+        <li><svg class="icon icon-sm"><use href="#i-chevron-right"/></svg><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li><svg class="icon icon-sm"><use href="#i-mail"/></svg>contacto@novanews.com</li>
+        <li><svg class="icon icon-sm"><use href="#i-phone"/></svg>+57 300 000 0000</li>
+        <li><svg class="icon icon-sm"><use href="#i-map"/></svg>Bogotá, Colombia</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Boletín</h4>
+      <p>Recibe un resumen semanal de las noticias más relevantes.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 NovaNews — Proyecto académico, Módulo Front-end, Politécnico Grancolombiano.</div>
+</footer>
+
+</body>
+</html>
