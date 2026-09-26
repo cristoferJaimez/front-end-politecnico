@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>NovaNews - Noticias</title>
+<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 <svg style="display:none">
@@ -55,114 +56,24 @@
     <div class="filters">
       <div class="search-box">
         <svg class="icon"><use href="#i-search"/></svg>
-        <input type="text" placeholder="Buscar noticia por palabra clave...">
+        <input type="text" id="buscar-input" placeholder="Buscar noticia por palabra clave...">
       </div>
-      <select>
-        <option>Todas las categorías</option>
-        <option>Tecnología</option>
-        <option>Educación</option>
-        <option>Turismo</option>
-        <option>Comercio</option>
-      </select>
-      <select>
-        <option>Más recientes</option>
-        <option>Más antiguas</option>
+      <select id="categoria-select">
+        <option value="todas">Todas las categorías</option>
+        <option value="Tecnología">Tecnología</option>
+        <option value="Deportes">Deportes</option>
+        <option value="Educación">Educación</option>
+        <option value="Turismo">Turismo</option>
+        <option value="Comercio">Comercio</option>
       </select>
     </div>
 
-    <div class="card-grid">
+    <div id="listado-lista" class="card-grid"></div>
 
-      <article class="card">
-        <div class="ph-img"><svg class="icon"><use href="#i-image"/></svg>Tecnología</div>
-        <button class="icon-btn card-fav-btn js-fav" data-fav-id="proc-latam" aria-label="Agregar a favoritos"><svg class="icon"><use href="#i-heart"/></svg></button>
-        <div class="card-body">
-          <span class="badge"><svg class="icon icon-sm"><use href="#i-tag"/></svg>Tecnología</span>
-          <h3>Nueva generación de procesadores llega a Latinoamérica</h3>
-          <p>Los fabricantes anuncian mejoras de eficiencia energética y rendimiento.</p>
-          <div class="card-foot">
-            <span class="meta-row"><svg class="icon icon-sm"><use href="#i-calendar"/></svg>10 sep</span>
-            <a href="detalle.html" class="btn ghost">Ver más <svg class="icon icon-sm"><use href="#i-arrow-right"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="ph-img"><svg class="icon"><use href="#i-image"/></svg>Educación</div>
-        <button class="icon-btn card-fav-btn js-fav" data-fav-id="modelos-hibridos" aria-label="Agregar a favoritos"><svg class="icon"><use href="#i-heart"/></svg></button>
-        <div class="card-body">
-          <span class="badge"><svg class="icon icon-sm"><use href="#i-tag"/></svg>Educación</span>
-          <h3>Universidades adoptan modelos híbridos de enseñanza</h3>
-          <p>Estudiantes destacan la flexibilidad del nuevo modelo combinado.</p>
-          <div class="card-foot">
-            <span class="meta-row"><svg class="icon icon-sm"><use href="#i-calendar"/></svg>9 sep</span>
-            <a href="detalle.html" class="btn ghost">Ver más <svg class="icon icon-sm"><use href="#i-arrow-right"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="ph-img"><svg class="icon"><use href="#i-image"/></svg>Turismo</div>
-        <button class="icon-btn card-fav-btn js-fav" data-fav-id="destinos-colombia" aria-label="Agregar a favoritos"><svg class="icon"><use href="#i-heart"/></svg></button>
-        <div class="card-body">
-          <span class="badge"><svg class="icon icon-sm"><use href="#i-tag"/></svg>Turismo</span>
-          <h3>Cinco destinos colombianos para visitar este semestre</h3>
-          <p>Una guía rápida con los lugares favoritos de los viajeros.</p>
-          <div class="card-foot">
-            <span class="meta-row"><svg class="icon icon-sm"><use href="#i-calendar"/></svg>8 sep</span>
-            <a href="detalle.html" class="btn ghost">Ver más <svg class="icon icon-sm"><use href="#i-arrow-right"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="ph-img"><svg class="icon"><use href="#i-image"/></svg>Comercio</div>
-        <button class="icon-btn card-fav-btn js-fav" data-fav-id="comercio-electronico" aria-label="Agregar a favoritos"><svg class="icon"><use href="#i-heart"/></svg></button>
-        <div class="card-body">
-          <span class="badge"><svg class="icon icon-sm"><use href="#i-tag"/></svg>Comercio</span>
-          <h3>Comercio electrónico crece un 18% en el último trimestre</h3>
-          <p>Las plataformas locales reportan un aumento sostenido en ventas.</p>
-          <div class="card-foot">
-            <span class="meta-row"><svg class="icon icon-sm"><use href="#i-calendar"/></svg>7 sep</span>
-            <a href="detalle.html" class="btn ghost">Ver más <svg class="icon icon-sm"><use href="#i-arrow-right"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="ph-img"><svg class="icon"><use href="#i-image"/></svg>Tecnología</div>
-        <button class="icon-btn card-fav-btn js-fav" data-fav-id="ia-diagnosticos" aria-label="Agregar a favoritos"><svg class="icon"><use href="#i-heart"/></svg></button>
-        <div class="card-body">
-          <span class="badge"><svg class="icon icon-sm"><use href="#i-tag"/></svg>Tecnología</span>
-          <h3>Inteligencia artificial aplicada a diagnósticos médicos</h3>
-          <p>Hospitales locales inician pilotos con modelos de apoyo diagnóstico.</p>
-          <div class="card-foot">
-            <span class="meta-row"><svg class="icon icon-sm"><use href="#i-calendar"/></svg>6 sep</span>
-            <a href="detalle.html" class="btn ghost">Ver más <svg class="icon icon-sm"><use href="#i-arrow-right"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="ph-img"><svg class="icon"><use href="#i-image"/></svg>Educación</div>
-        <button class="icon-btn card-fav-btn js-fav" data-fav-id="becas-intercambio" aria-label="Agregar a favoritos"><svg class="icon"><use href="#i-heart"/></svg></button>
-        <div class="card-body">
-          <span class="badge"><svg class="icon icon-sm"><use href="#i-tag"/></svg>Educación</span>
-          <h3>Becas de intercambio abren convocatoria 2026-2</h3>
-          <p>Estudiantes de pregrado podrán postularse hasta finales de mes.</p>
-          <div class="card-foot">
-            <span class="meta-row"><svg class="icon icon-sm"><use href="#i-calendar"/></svg>5 sep</span>
-            <a href="detalle.html" class="btn ghost">Ver más <svg class="icon icon-sm"><use href="#i-arrow-right"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-
-    <div class="pagination">
-      <span class="active">1</span>
-      <span>2</span>
-      <span>3</span>
-      <span><svg class="icon icon-sm"><use href="#i-chevron-right"/></svg></span>
+    <div id="listado-vacio" class="empty-state" hidden>
+      <svg class="icon"><use href="#i-search"/></svg>
+      <h3>No se encontraron noticias</h3>
+      <p>Prueba con otra palabra clave o cambia la categoría seleccionada.</p>
     </div>
   </div>
 </section>
@@ -198,6 +109,7 @@
   <div class="footer-bottom">© 2026 NovaNews — Proyecto académico, Módulo Front-end, Politécnico Grancolombiano.</div>
 </footer>
 
-
+<script src="../js/data.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>

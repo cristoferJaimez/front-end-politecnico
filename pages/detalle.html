@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>NovaNews - Detalle de noticia</title>
+<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 <svg style="display:none">
@@ -50,25 +51,24 @@
       <svg class="icon"><use href="#i-chevron-right"/></svg>
       <a href="listado.html">Noticias</a>
       <svg class="icon"><use href="#i-chevron-right"/></svg>
-      Tecnología
+      <span id="detalle-breadcrumb-cat">Categoría</span>
     </p>
 
     <div class="detalle-wrap">
       <div>
         <div class="ph-img detalle-img"><svg class="icon icon-lg"><use href="#i-image"/></svg>Imagen representativa</div>
         <div class="detalle-info">
-          <span class="badge"><svg class="icon icon-sm"><use href="#i-tag"/></svg>Tecnología</span>
-          <h1>Nueva generación de procesadores llega a Latinoamérica</h1>
+          <span class="badge"><svg class="icon icon-sm"><use href="#i-tag"/></svg><span id="detalle-categoria">Categoría</span></span>
+          <h1 id="detalle-titulo">Cargando noticia…</h1>
           <div class="detalle-meta">
-            <span><svg class="icon icon-sm"><use href="#i-calendar"/></svg>10 de septiembre de 2026</span>
-            <span><svg class="icon icon-sm"><use href="#i-user"/></svg>Redacción NovaNews</span>
+            <span><svg class="icon icon-sm"><use href="#i-calendar"/></svg><span id="detalle-fecha"></span></span>
+            <span><svg class="icon icon-sm"><use href="#i-user"/></svg><span id="detalle-autor"></span></span>
           </div>
-          <p>Los principales fabricantes de semiconductores confirmaron la llegada de su nueva línea de procesadores a los mercados de Latinoamérica, con mejoras significativas en eficiencia energética y capacidad de procesamiento gráfico.</p>
-          <p>De acuerdo con los primeros reportes técnicos, los nuevos chips reducen el consumo energético hasta en un 30% frente a la generación anterior, lo que representa un avance importante para dispositivos móviles y portátiles de gama media.</p>
-          <p>Analistas del sector destacan que esta actualización podría acelerar la renovación tecnológica en instituciones educativas y pequeñas empresas de la región, gracias a una relación más favorable entre costo y rendimiento.</p>
+
+          <div id="detalle-cuerpo"></div>
 
           <div class="detalle-acciones">
-            <button class="btn secondary js-fav" data-fav-id="proc-latam">
+            <button class="btn secondary js-fav" id="btn-fav-detalle">
               <svg class="icon icon-sm"><use href="#i-heart"/></svg> <span class="fav-label">Agregar a favoritos</span>
             </button>
             <a href="contacto.html" class="btn"><svg class="icon icon-sm"><use href="#i-mail"/></svg> Contactar sobre esta noticia</a>
@@ -78,18 +78,7 @@
 
       <aside class="side-box">
         <h4>Noticias relacionadas</h4>
-        <div class="mini-item">
-          <div class="ph-img"><svg class="icon"><use href="#i-image"/></svg></div>
-          <span>Inteligencia artificial aplicada a diagnósticos médicos</span>
-        </div>
-        <div class="mini-item">
-          <div class="ph-img"><svg class="icon"><use href="#i-image"/></svg></div>
-          <span>Comercio electrónico crece un 18% en el último trimestre</span>
-        </div>
-        <div class="mini-item">
-          <div class="ph-img"><svg class="icon"><use href="#i-image"/></svg></div>
-          <span>Universidades adoptan modelos híbridos de enseñanza</span>
-        </div>
+        <div id="detalle-relacionadas"></div>
         <a href="listado.html" class="btn secondary block">Ver todas las noticias</a>
       </aside>
     </div>
@@ -127,5 +116,7 @@
   <div class="footer-bottom">© 2026 NovaNews — Proyecto académico, Módulo Front-end, Politécnico Grancolombiano.</div>
 </footer>
 
+<script src="../js/data.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>
