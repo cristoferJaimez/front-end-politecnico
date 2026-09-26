@@ -15,10 +15,10 @@ Sitio construido con **HTML, CSS y JavaScript puro** (sin frameworks ni librerí
 
 ### 1. Clonar el repositorio
 
-\`\`\`bash
+```bash
 git clone https://github.com/cristoferJaimez/front-end-politecnico.git
 cd front-end-politecnico
-\`\`\`
+```
 
 ### 2. Levantar un servidor local
 
@@ -26,17 +26,17 @@ Por restricciones del navegador con `fetch()` bajo el protocolo `file://`, se re
 
 Con Python instalado:
 
-\`\`\`bash
+```bash
 python -m http.server 5500
-\`\`\`
+```
 
 O con la extensión **Live Server** de VS Code (clic derecho sobre `index.html` → *Open with Live Server*).
 
 ### 3. Abrir en el navegador
 
-\`\`\`
+```
 http://localhost:5500
-\`\`\`
+```
 
 > Si abres los archivos directamente con doble clic, el sitio también funciona gracias a un contenido de respaldo embebido en JavaScript, pero **los favoritos no se comparten correctamente entre páginas bajo `file://`**. Usar el servidor local evita ese problema y es además el mismo comportamiento que tendrá el sitio una vez publicado (por ejemplo, en GitHub Pages).
 
@@ -49,9 +49,29 @@ http://localhost:5500
 - **Contacto**: formulario con validación de campos (nombre, correo con formato válido, mensaje) y mensajes de error/éxito.
 - Diseño responsivo, estilo minimalista tipo SaaS (paleta índigo, botones tipo pill, navegación con iconos).
 
+## Capturas de pantalla
+
+**Inicio**
+![Inicio](capturas/01_inicio.png)
+
+**Listado de noticias**
+![Listado](capturas/02_listado.png)
+
+**Listado filtrado por categoría**
+![Listado filtrado](capturas/03_listado_filtrado.png)
+
+**Detalle de noticia**
+![Detalle](capturas/04_detalle.png)
+
+**Favoritos**
+![Favoritos](capturas/05_favoritos.png)
+
+**Contacto con validación**
+![Contacto](capturas/06_contacto.png)
+
 ## Estructura del proyecto
 
-\`\`\`
+```
 NovaNews/
 ├── index.html                # Página de inicio
 ├── css/
@@ -61,12 +81,13 @@ NovaNews/
 │   └── main.js                 # Lógica de renderizado, favoritos, filtros y validación
 ├── data/
 │   └── noticias.json          # Fuente de datos de las noticias
+├── capturas/                  # Screenshots del prototipo funcionando
 └── pages/
     ├── listado.html            # Listado con buscador y filtro por categoría
     ├── detalle.html             # Detalle dinámico de una noticia
     ├── favoritos.html            # Noticias marcadas como favoritas
     └── contacto.html              # Formulario de contacto con validación
-\`\`\`
+```
 
 ## Tecnologías
 
