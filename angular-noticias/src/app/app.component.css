@@ -1,0 +1,88 @@
+header.site {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.nav-wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.18rem;
+  font-weight: 800;
+  letter-spacing: -.2px;
+}
+
+.logo .mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #fff;
+  font-size: .95rem;
+}
+
+.badge-angular {
+  background: #fff0f0;
+  color: #c3002f;
+  font-size: .75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.contenido {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 32px 28px 60px;
+}
+
+.contenido h1 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  color: var(--text-soft);
+  max-width: 760px;
+  margin-bottom: 28px;
+  font-size: .92rem;
+}
+
+.subtitulo code {
+  background: var(--primary-soft);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: .85em;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--text-faint);
+  font-size: .82rem;
+}
+
+.site-footer a {
+  color: var(--primary);
+  font-weight: 600;
+}

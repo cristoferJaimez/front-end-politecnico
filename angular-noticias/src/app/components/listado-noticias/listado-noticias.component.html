@@ -1,0 +1,29 @@
+<section class="toolbar">
+  <label for="buscador" class="visually-hidden">Buscar noticias</label>
+  <input
+    id="buscador"
+    type="text"
+    class="buscador"
+    placeholder="Buscar por título o categoría..."
+    [(ngModel)]="textoBusqueda">
+
+  <label class="chk-favoritas">
+    <input type="checkbox" [(ngModel)]="soloFavoritas">
+    Solo favoritas
+  </label>
+</section>
+
+<p *ngIf="cargando" class="estado">Cargando noticias...</p>
+
+<p *ngIf="!cargando && noticiasFiltradas.length === 0" class="estado">
+  No se encontraron noticias con ese criterio.
+</p>
+
+<div class="grid" *ngIf="!cargando">
+  <app-noticia-card
+    *ngFor="let noticia of noticiasFiltradas"
+    [noticia]="noticia"
+    [esFavorita]="esFavorita(noticia.id)"
+    (toggleFavorito)="alternarFavorita($event)">
+  </app-noticia-card>
+</div>
